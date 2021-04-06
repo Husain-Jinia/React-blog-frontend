@@ -16,7 +16,7 @@ function App() {
 
       <Route path="/" exact component={Home}/>
       <Route path="/contact-us" component={ContactUs}/>
-      <Route path="/post" component={Post}/>
+      <Route path="/post/:postid" component={Post}/>
     </div>
     </Router>
     
