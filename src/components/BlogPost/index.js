@@ -17,22 +17,18 @@ function BlogPost(props) {
         blogImage:"",
         blogText:""
     });
-    const[postid,setPostId] = useState("")
+    const[slug,setSlug] = useState("")
     
     useEffect(() => {
-    const postid = props.match.params.postid;
-    const post = blogPost.data.find(post => post.id == postid)
+    const slug = props.match.params.slug;
+    const post = blogPost.data.find(post => post.slug == slug);
     setPost(post);
-    setPostId(postid)
-    },[post,props.match.params.postid]);
+    setSlug(slug)
+    },[post, props.match.params.slug]);
 
-    if(post.blogImage == "") return null;
+    if(post.blogImage=="") return null;
     
     return (
-
-        
-        
-
         <div className="blogPostContainer">
             <Card>
                 <div className="blogHeader">
